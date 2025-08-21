@@ -1,96 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Elite Code Review Platform Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    /* Elite Dark Theme - Premium Developer Experience */
+    --background: 222 47% 3%;
+    --background-secondary: 222 40% 5%;
+    --background-tertiary: 222 35% 8%;
     --foreground: 210 40% 98%;
+    --foreground-muted: 215 20% 75%;
 
-    --card: 222.2 84% 4.9%;
+    /* Glassmorphic Cards */
+    --card: 222 40% 5%;
+    --card-glass: 222 40% 8%;
     --card-foreground: 210 40% 98%;
+    --card-border: 220 30% 15%;
 
-    --popover: 222.2 84% 4.9%;
+    /* Code Editor Theme */
+    --code-bg: 222 47% 2%;
+    --code-border: 240 15% 18%;
+    --code-selection: 241 35% 25%;
+
+    /* Elite Purple-Blue Gradient System */
+    --primary: 252 83% 65%;
+    --primary-hover: 252 83% 70%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 252 83% 85%;
+
+    /* Electric Accent Colors */
+    --accent-electric: 186 100% 65%;
+    --accent-success: 158 64% 52%;
+    --accent-warning: 43 100% 65%;
+    --accent-error: 0 84% 60%;
+
+    /* Glass Effects */
+    --glass-border: 220 30% 20%;
+    --glass-shadow: 222 47% 1%;
+
+    /* Interactive States */
+    --hover-overlay: 222 40% 12%;
+    --active-overlay: 252 83% 15%;
+
+    /* Borders and Inputs */
+    --border: 220 30% 15%;
+    --input: 220 30% 12%;
+    --ring: 252 83% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(252 83% 65%), hsl(276 83% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 3%) 0%, hsl(241 35% 8%) 50%, hsl(252 35% 12%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(220 30% 8% / 0.4), hsl(220 30% 12% / 0.6));
+    --gradient-code: linear-gradient(135deg, hsl(222 47% 2%), hsl(241 30% 4%));
+
+    /* Shadows */
+    --shadow-glass: 0 8px 32px -12px hsl(222 47% 1% / 0.5);
+    --shadow-glow: 0 0 40px hsl(252 83% 65% / 0.15);
+    --shadow-card: 0 4px 20px -8px hsl(222 47% 1% / 0.8);
+
+    /* Animation Timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
+
+    /* Secondary Theme for Light Mode (Optional) */
+    --secondary: 222 40% 8%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 222 35% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --popover: 222 40% 5%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -100,6 +90,65 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter overflow-x-hidden;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+
+  /* Glass morphism utilities */
+  .glass-card {
+    @apply bg-card-glass/40 backdrop-blur-xl border border-glass-border;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-input {
+    @apply bg-input/20 backdrop-blur-sm border border-glass-border;
+  }
+
+  /* Code styling */
+  .code-area {
+    @apply bg-code-bg border border-code-border font-mono text-sm;
+    background: var(--gradient-code);
+  }
+
+  /* Glow effects */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Animation keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px hsl(252 83% 65% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(252 83% 65% / 0.6); }
+  }
+
+  @keyframes code-typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-code-typing {
+    animation: code-typing 3s steps(40, end) infinite;
   }
 }
