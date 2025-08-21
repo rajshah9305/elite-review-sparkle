@@ -8,11 +8,13 @@ const cardVariants = cva(
     variants: {
       variant: {
         default: "bg-card border shadow-card",
-        glass: "glass-card",
-        code: "code-area",
-        gradient: "bg-gradient-glass border border-glass-border shadow-glass",
-        floating: "glass-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1",
-        glow: "bg-card border shadow-glow",
+        glass: "ultra-glass hover:shadow-glow transition-all duration-300 magnetic-field",
+        floating: "ultra-glass hover:shadow-glow hover:-translate-y-2 transition-all duration-500 magnetic-field animate-scale-in",
+        glow: "ultra-glass shadow-glow animate-glow-pulse magnetic-field",
+        code: "code-area border border-code-border magnetic-field",
+        neural: "ultra-glass animate-neural-pulse magnetic-field relative overflow-hidden",
+        matrix: "bg-background-tertiary border border-accent-electric/20 hover:border-accent-electric/40 transition-all duration-300 magnetic-field",
+        premium: "ultra-glass bg-gradient-primary/5 border-primary/30 hover:border-primary/50 shadow-glow magnetic-field",
       },
     },
     defaultVariants: {

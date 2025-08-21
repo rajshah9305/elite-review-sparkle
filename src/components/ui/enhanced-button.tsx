@@ -15,11 +15,13 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Elite variants
-        gradient: "bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 hover:scale-105",
-        glass: "glass-card text-foreground hover:bg-hover hover:shadow-glow transition-all duration-300",
-        electric: "bg-accent-electric text-background hover:bg-accent-electric/90 shadow-glow animate-glow-pulse",
-        hero: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-glow hover:shadow-[0_0_60px_hsl(252_83%_65%/0.4)] transition-all duration-500 hover:scale-105",
-        code: "code-area text-foreground hover:bg-code-selection font-mono text-xs",
+        gradient: "bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 hover:scale-105 magnetic-field neural-glow",
+        glass: "ultra-glass text-foreground hover:bg-hover hover:shadow-glow transition-all duration-300 magnetic-field",
+        electric: "bg-accent-electric text-background hover:bg-accent-electric/90 shadow-glow animate-glow-pulse magnetic-field",
+        hero: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-glow hover:shadow-[0_0_60px_hsl(252_83%_65%/0.4)] transition-all duration-500 hover:scale-105 magnetic-field neural-glow",
+        code: "code-area text-foreground hover:bg-code-selection font-mono text-xs magnetic-field",
+        neural: "ultra-glass text-foreground animate-neural-pulse magnetic-field relative overflow-hidden",
+        matrix: "bg-background-tertiary border border-accent-electric/30 text-accent-electric hover:bg-accent-electric/10 magnetic-field",
       },
       size: {
         default: "h-10 px-4 py-2",
